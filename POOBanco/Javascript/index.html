@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>POO Banco</title>
+        <script src="_javascript/classes.js"></script>
+    </head>
+    <body>
+        <script>
+            // Todas tipo valor:
+            var moeda25Cent = new Dinheiro(0.25, "moeda");
+            var moeda1Real = new Dinheiro(1.00, "moeda");
+            var nota5Reais = new Dinheiro(5.00, "nota");
+
+            moeda25Cent.apresentacao();
+            moeda1Real.apresentacao();
+            nota5Reais.apresentacao();
+
+            // Tipo Guardado
+            var cof = new Cofre();
+
+            cof.depositar(moeda25Cent);
+            cof.depositar(nota5Reais);
+            cof.retirar(5.00);
+            cof.verificar();
+
+            delete moeda25Cent;
+            delete moeda1Real;
+            delete nota5Reais;
+            delete cof;
+        </script>
+    </body>
+</html>

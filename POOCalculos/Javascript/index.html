@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>POO Cálculos</title>
+        <script src="_javascript/classes.js"></script>
+    </head>
+    <body>
+        <script>
+            var num = parseInt(prompt("Digite um número:", "1"));
+
+            try {
+                document.write(`Quadrado de ${num}: ${Calculos.quadrado(num)}.<br/>`);
+                document.write(`Cubo de ${num}: ${Calculos.cubo(num)}.<br/>`);
+                document.write(`Fatorial de ${num}: ${Calculos.fatorial(num)}.<br/>`);
+                document.write(`Fibonacci de ${num} termos: ${Calculos.fibonacci(num)}.<br/>`);
+                
+            }
+            catch(ex) {
+                alert(`ERRO: ${ex.message}.`);
+            }
+        </script>
+    </body>
+</html>

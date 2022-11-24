@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>POO Loterias</title>
+        <script src="_javascript/classes.js"></script>
+    </head>
+    <body>
+        <script>
+            var linha = () => document.write("<hr/>");
+            // Todos tipo Loteria
+            var faiLoto = [11, 12, 13, 14, 15];
+            var lotofacil = new Jogo(15, 15, 01, 25, faiLoto);
+            var apLoto = [01, 03, 04, 06, 08, 09, 10, 11, 12, 15, 17, 18, 21, 23, 25];
+
+            lotofacil.fazerAposta(apLoto);
+            lotofacil.sorteio();
+
+            linha();
+
+            var faiQui = [02, 03, 04, 05];
+            var quina = new Jogo(05, 05, 01, 80, faiQui);
+            var apQui = [05, 20, 23, 53, 80];
+
+            quina.fazerAposta(apQui);
+            quina.sorteio();
+
+            linha();
+
+            var faiSe = [04, 05, 06];
+            var mega = new Jogo(06, 06, 01, 60, faiSe);
+            var apSe = [10, 24, 30, 36, 51, 53];
+
+            mega.fazerAposta(apSe);
+            mega.sorteio();
+
+            delete lotofacil;
+            delete quina;
+            delete mega;
+        </script>
+    </body>
+</html>

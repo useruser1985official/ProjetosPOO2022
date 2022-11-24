@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>POO Banca</title>
+        <script src="_javascript/classes.js"></script>
+    </head>
+    <body>
+        <script>
+            // Todas tipo Produto:
+
+            var veja = new Revista("Veja", "Abril", 200, 2564);
+            var caras = new Revista("Caras", "Abril", 250, 1948);
+
+            veja.abrir();
+            veja.avancarPag();
+            veja.voltarPag();
+            veja.folhear(50);
+            // veja.apresentacao();
+
+            var superman = new Hq("Superman", "Panini", 96, 47);
+            var batman = new Hq("Batman", "Panini", 96, 47);
+            var liga = new Hq("Liga da Justiça", "Panini", 96, 47);
+
+            // superman.apresentacao();
+            // batman.apresentacao();
+
+            var dgabc = new Jornal("Diário do Grande ABC", "DGABC", 300, true);
+            var folha = new Jornal("Folha de São Paulo", "Grupo Folha", 400, true);
+
+            // dgabc.apresentacao();
+
+            var inic = new Livro("Javascript para Iniciantes", "Tecno", 250);
+            var objet = new Livro("Orientação a Objetos em Javascript", "Tecno", 300);
+            var avanc = new Livro("Javascript Avançado", "Tecno", 400);
+
+            // inic.apresentacao();
+            // objet.apresentacao();
+
+            document.write("<hr/>");
+
+            // Tipo Ponto
+            var banc = new Banca(veja, superman, dgabc, folha, objet);
+
+            banc.apresentacao();
+
+            delete veja;
+            delete caras;
+            delete superman;
+            delete batman;
+            delete liga;
+            delete dgabc;
+            delete folha;
+            delete inic;
+            delete objet;
+            delete avanc;
+            delete banc;
+        </script>
+    </body>
+</html>
